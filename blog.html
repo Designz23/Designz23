@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Designz23</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Blog Hero Section -->
+        <section class="hero-blog">
+            <div class="hero-content">
+                <h1>Our Blog</h1>
+                <p>Stay updated with the latest trends in web design and development.</p>
+            </div>
+        </section>
+
+        
+        <section class="blog-posts">
+            <div class="container">
+                <h2>Latest Posts</h2>
+                <div class="blog-grid">
+                   
+                    <div class="blog-post">
+                        <h3>5 Tips for Creating a Stunning Website</h3>
+                        <p>Learn essential tips to build a website that captures attention and engages users.</p>
+                        <a href="#" class="btn-read-more" onclick="openBlogModal('5 Tips for Creating a Stunning Website', '1. Prioritize Simplicity 2. Use High-Quality Visuals 3. Choose the Right Colors 4. Optimize for Mobile 5. Focus on User Experience (UX).')">Read More</a>
+                    </div>
+                    
+                    <div class="blog-post">
+                        <h3>Why Mobile-First Design Matters</h3>
+                        <p>Explore the importance of designing with mobile users in mind from the start.</p>
+                        <a href="#" class="btn-read-more" onclick="openBlogModal('Why Mobile-First Design Matters', 'Mobile-first design is important because it focuses on making websites work well on mobile devices, where most people browse the internet. It helps websites load faster, look good on all devices, and work smoothly. Since Google ranks mobile-friendly sites higher, it can improve your website’s visibility. Mobile-first design also makes it easier for people to use your site, leading to more engagement and higher chances of converting visitors into customers. In short, it ensures your website works well for today’s mobile users.')">Read More</a>
+                    </div>
+                
+                    <div class="blog-post">
+                        <h3>Top 10 Trends in Web Design for 2024</h3>
+                        <p>Discover the latest trends shaping the future of web design.</p>
+                        <a href="#" class="btn-read-more" onclick="openBlogModal('Top 10 Trends in Web Design for 2024', '1.Dark Mode 2.Minimalism and Simplicity 3.3D and Immersive Visuals 4.AI-Driven Design 5.Micro-Interactions 6.Custom Illustrations 7.Voice User Interface (VUI) 8.Sustainability in Design 9.Neumorphism 10.Neumorphism')">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBlogModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalContent"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Designz23. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        function openBlogModal(title, content) {
+            const modal = document.getElementById('blogModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            
+            modalTitle.textContent = title;
+            modalContent.textContent = content;
+            modal.style.display = 'block';
+        }
+
+       
+        function closeBlogModal() {
+            const modal = document.getElementById('blogModal');
+            modal.style.display = 'none';
+        }
+
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('blogModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

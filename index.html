@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fancy Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/banner.jpg" alt="Banner Image" class="banner">
+        <div class="banner-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your gateway to creativity and professional design solutions.</p>
+            <button onclick="scrollToSection('portfolio')">Explore Portfolio</button>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Designz23</h2>
+            <p>Designz23.com has a portfolio of satisfied customers. We prefer long-term business relationships. Below are the latest screenshots of our portfolio.</p>
+        </section>
+
+        <section id="portfolio" class="section">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item" onclick="openModal('S.A.V.E Website', 'Survival Option Services trains emergency responders for active shooter and mass casualty situations. Their S.A.V.E. program teaches teams of police, firefighters, and medics to work together to rescue and treat victims quickly and safely. They focus on hands-on training and teamwork to save lives in dangerous situations')">
+                    <img src="images/p1.png" alt="S.A.V.E Website">
+                    <h3>S.A.V.E</h3>
+                    <a href="https://www.survivaloptionservices.com/" target="_blank">Visit</a>
+                </div>
+                <div class="portfolio-item" onclick="openModal('Bucks Run Oil', 'Bucks Run Oil appears to be a company offering heating oil and diesel fuel delivery services, primarily serving areas in Pennsylvania, like the Lehigh Valley. They emphasize affordable pricing and reliable customer service. Their services seem to cater to residential and commercial needs, ensuring warmth and comfort during colder months.')">
+                    <img src="images/p2.png" alt="Bucks Run Oil">
+                    <h3>Bucks Run Oil</h3>
+                    <a href="https://www.bucksrunoil.com/" target="_blank">Visit</a>
+                </div>
+                <div class="portfolio-item" onclick="openModal('Discount Home Furnishings', 'The website Discount Home Furnishings offers home hardware products, including cabinet knobs, door handles, and bathroom fixtures. They provide a variety of styles, finishes, and brands at competitive prices to help improve the look and functionality of your home.')">
+                    <img src="images/p3.png" alt="Discount Home Furnishings">
+                    <h3>Discount Home Furnishings</h3>
+                    <a href="https://discounthomefurnishings.com/" target="_blank">Visit</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Designz23. All rights reserved.</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

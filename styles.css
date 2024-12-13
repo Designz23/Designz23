@@ -1,3 +1,67 @@
+/* General Responsive Rules */
+body {
+    font-size: 16px; 
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    background-color: #455946; 
+}
+
+.navbar ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.hero-about {
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-about .hero-content h1 {
+    font-size: 1.8rem;
+}
+
+.hero-about .hero-content p {
+    font-size: 1rem;
+}
+
+.values-grid, .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navbar ul {
+        flex-direction: row;
+    }
+
+    .values-grid, .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-about .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-about .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -74,7 +138,7 @@ a {
     color: #e9e6df; 
     background: rgba(255, 255, 255, 0.1); 
 }
-/* Sections */
+
 .section {
     padding: 40px 20px;
     text-align: center;
@@ -116,7 +180,6 @@ footer {
     text-align: center;
 }
 
-/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -143,7 +206,7 @@ footer {
     font-size: 24px;
     cursor: pointer;
 }
-/* About Page Styles */
+/* About Page */
 .hero-about {
     background: url('hero-about.jpg') no-repeat center center/cover;
     height: 60vh;
@@ -164,7 +227,6 @@ footer {
     margin-top: 10px;
 }
 
-/* Introduction Section */
 .about-intro {
     padding: 40px 20px;
     text-align: center;
@@ -182,7 +244,6 @@ footer {
     margin: 0 auto;
 }
 
-/* Values Section */
 .values {
     background-color: #edf2f1;
     padding: 40px 20px;
@@ -210,7 +271,6 @@ footer {
     max-width: calc(33% - 40px);
 }
 
-/* Team Section */
 .team {
     padding: 40px 20px;
     background: #f8f4f0;
@@ -251,7 +311,7 @@ footer {
     color: #555;
 }
 
-/* Portfolio Hero Section */
+/* Portfolio page */
 .hero-portfolio {
     background: url('portfolio-banner.jpg') no-repeat center center/cover;
     color: white;
@@ -329,7 +389,7 @@ footer {
     background: #0056b3;
 }
 
-/* Contact Hero Section */
+/* Contact page */
 .hero-contact {
     background: url('contact-banner.jpg') no-repeat center center/cover;
     color: white;
@@ -441,7 +501,7 @@ footer {
     text-decoration: underline;
 }
 
-/* Blog Hero Section */
+/* Blog page */
 .hero-blog {
     background: url('blog-banner.jpg') no-repeat center center/cover;
     color: white;
@@ -454,7 +514,6 @@ footer {
     margin: auto;
 }
 
-/* Blog Posts Section */
 .blog-posts {
     padding: 50px 20px;
     background: #f9f9f9;
@@ -519,7 +578,6 @@ footer {
     background: #0056b3;
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
